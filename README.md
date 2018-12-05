@@ -12,8 +12,8 @@
 
 ## Installing Testcafe & other dependencies using npm
 
-3. Open the command prompt and execute `npm install -g testcafe`
-4. Open the project folder in IDE and Navigate to the project folder <<Backbase>> with the console. Here we need to download the required dependencies by typing this in the command line.
+1. Execute `npm install -g testcafe` to install Testcafe
+2. To install all dependencies of the project, Open the project folder in IDE and Navigate to the project folder <<Backbase>> with the console. Here we need to download the required dependencies by typing this in the command line.
 
 `npm i`
 
@@ -22,18 +22,22 @@ This command makes npm use the package.json file where all dependencies are list
 ## Project Folder Structure
 
 1. Backbase is the root project folder.
-2. The folder 'features' under backbase contains the test cases scripts.
-3. The folder 'pageObject' contains the script with reusable web page elements, form selectors for DOM scraping.
-4. The folder ' util' contains the helper files.
+2. The folder 'tests' under backbase contains the test cases scripts.
+3. The folder 'pageObject' contains the script with reusable web page elements, form selectors for DOM scraping. This application has many reusable page elements and so all of them is in the same script 'heroku-app-pageObject.js'. Page object scripts can be segregated with specific page elements based on the functionality/operation.
+4. The folder 'util' contains the helper files.
 
 ## To execute the testcases
 
-5. To run a single test or folder: Navigate to the project folder <<Backbase>> and execute the command `testcafe [browsertype] [testfile or folder]`
+1. To run a single test or folder: Navigate to the project folder <<and execute the command `testcafe [browsertype] [testfile or folder]`
   
-  example 1:  Backbase>> `testcafe chrome features`
-  This runs the entire Tests folder which holds all the testcases in features folder and this command runs all the testcases in Chrome browser.
-  example 2:  Backbase>> `testcafe chrome features/application-access-testcase.js`
+  example 1:  Backbase>> `testcafe chrome tests`
+  This runs the entire Tests folder which holds all the testcases in tests folder and this command runs all the testcases in Chrome browser.
+
+  example 2:  Backbase>> `testcafe chrome tests\application-access-testcase.js`
   This line executes a single test case in the chrome browser.
+
+  example 3:  Backbase>> `testcafe chrome .\tests\create-retrieve-new-computer-testcase.js --speed 0.1`
+  This line executes a single test case in the chrome browser in moderate speed. Speed limit value - 0.01 being the slowest and the limit value - 1 being the fastest (default)
 
 ## Information on the Test suite
 

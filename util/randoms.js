@@ -25,7 +25,7 @@ export default class Randoms {
     return disContinuedDate;
   }
   getRandomIndex(){
-    var resultIndex = faker.random.number(10);
+    var resultIndex = faker.random.number({min:1,max:10});
     testGlobals.setResultIndex(resultIndex);
     return resultIndex;
   }
