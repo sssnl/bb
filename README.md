@@ -28,7 +28,7 @@ This command makes npm use the package.json file where all dependencies are list
 
 ## To execute the testcases
 
-1. To run a single test or folder: Navigate to the project folder <<and execute the command `testcafe [browsertype] [testfile or folder]`
+1. To run a single test or folder: Navigate to the project folder and execute the command `testcafe [browsertype] [testfile or folder]` to run the tests in a specific browser or `testcafe all [testfile or folder]` to run in all the installed browsers.
   
   example 1:  Backbase>> `testcafe chrome tests`
   This runs the entire Tests folder which holds all the testcases in tests folder and this command runs all the testcases in Chrome browser.
@@ -68,8 +68,7 @@ Emulate chrome in the size it is being displayed on an ipad in landscape mode. I
 
 ## Debugging tests
 
-When debugging tests, add this line before the step where the test fails:
-`await t.debug()`
+When debugging tests, add this line before the step where the test fails: `await t.debug()`
 Testcafe will pause before it fails and using the browsers console you can check page elements and verify whether these are visible the moment Testcafe expects them to be.
 
 If the Selector is visible at the test step that fails, the test most likely fails due to an animation that renders elements unclickable or invisible. When this happens, possibly static wait can be added by using : `await t.wait(500)` that tells Testcafe to wait for this step for 0.5 seconds.
