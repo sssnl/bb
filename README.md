@@ -1,12 +1,18 @@
+
+## About Testcafe
+
+1. Testcafe is a Node.js tool to automate end-to-end web testing.
+2. TestCafe is free to use and has Plugins, integration with other tools, launching tests from IDE, etc. 
+3. TestCafe runs on Windows, MacOS, and Linux. It supports desktop, mobile, remote and cloud browsers (UI or headless).
+
 ## Pre-requirements
 
-1. Ensure that Node.js and npm are installed on your computer
-2. Download or Clone the repository <<BB-TEST-COMPUTER-APPLICATION>> to your harddrive
+1. Ensure that Node.js and npm are installed on your computer.
+2. Download or Clone the repository <<https://github.com/sssnl/bb.git>> to your local.
 
 ## Installing Testcafe & other dependencies using npm
 
 3. Open the command prompt and execute `npm install -g testcafe`
-
 4. Open the project folder in IDE and Navigate to the project folder <<Backbase>> with the console. Here we need to download the required dependencies by typing this in the command line.
 
 `npm i`
@@ -29,9 +35,9 @@ This command makes npm use the package.json file where all dependencies are list
   example 2:  Backbase>> `testcafe chrome features/application-access-testcase.js`
   This line executes a single test case in the chrome browser.
 
-## Information on the Regressionset
+## Information on the Test suite
 
-Testcode in the automated regressionset is structured using the Page Object Model of abstraction. Which means information on how to perform actions and interact with the application is stored in Page Objects.
+Tests in the automated test suite are structured using the Page Object Model of abstraction which means information on how to perform actions and interact with the application is stored in Page Objects.
 
 ### Helper files
 The util folder contains helper files that contain functions which are used throughout the page objects. Most notable is the `randoms.js` file, which contains functions that return randomly generated test data using libraries such as `faker and moment`
@@ -66,6 +72,7 @@ If the Selector is visible at the test step that fails, the test most likely fai
 
 
 #### Maintaining and updating the package.json
+
 After installing npm-check-updates, you can update the package.json by running the cmd `ncu -u`, and then download the latest versions of the dependencies by running the `npm i` command.
 
 I would suggest running the regressionset at least once after updating the dependencies, and if a new version of the dependencies destroys tests, returning the version of that package to its original state, but then typing it as follows: `1.2.x`
